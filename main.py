@@ -44,7 +44,7 @@ class EmailExtractorTestCase(unittest.TestCase):
                 mail = x[0]
                 is_student = x[1]
                 # then
-                #extractor = EmailExtractor(email)
+                extractor = EmailExtractor(email)
                 # expect
                 self.assertEqual(is_student, extractor.is_student())
 
@@ -69,7 +69,7 @@ class EmailExtractorTestCase(unittest.TestCase):
                 # then
                 extractor = EmailExtractor(email)
                 # expect
-                #self.assertEqual(surname, extractor.get_surname())
+                self.assertEqual(surname, extractor.get_surname())
 
     def test_get_name(self):
         for x in self.data:
